@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Count2</title>
+</head>
+<body>
+<h1>Quantidade de palavras = {{ qtwords }} </h1>
+<a href="{% url 'home' %}">Reinicia</a>
+<h1>Texto original:</h1>
+{{ fulltext }}<br>
+{% for word, count in wordcountdic %}
+{{ word }} - {{count}} <br/>
+{% endfor %}
+</body>
+</html>
